@@ -25,3 +25,11 @@ int [] arr={0,0,1,1,1,1,2,3,3};
 return j;
     }
 }
+/*
+* Much  muhasib hafeez ganaie ...   said         muhasib        cxhfyry tfdxtyrl6x8rr6r657ee
+*
+*
+*
+*
+*
+* */
