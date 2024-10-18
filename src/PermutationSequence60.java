@@ -18,7 +18,7 @@ public class PermutationSequence60 {
         while(true){
             ans=ans+numbers.get(k/fact);
             numbers.remove(k/fact);
-            if(numbers.size()==0) break;
+            if(numbers.isEmpty()) break;
 
             k=k%fact;
             fact=fact/numbers.size();
