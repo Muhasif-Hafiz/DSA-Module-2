@@ -7,26 +7,37 @@ public class SortStack {
         Stack<Integer> s= new Stack<>();
         s.push(3);
         s.push(2);
-        s.push(6);
         s.push(1);
+        s.push(9);
         Stack<Integer> ans= sort(s);
         while(!ans.isEmpty()){
             System.out.println(ans.pop());
         }
     }
     public static Stack<Integer> sort(Stack<Integer> s) {
+        Stack<Integer> stack = new Stack<>();
 
-        Stack<Integer> result= new Stack<>();
+      while(!s.isEmpty()){
 
-        while(!s.isEmpty()){
-            int temp=s.pop();
-
-            while(!result.isEmpty() && result.peek()>temp){
-                s.push(result.pop());
-            }
-            result.push(temp);
+          int num= s.pop();
+          insert(stack, num);
+      }
+      return stack;
+    }
+    public static  void insert(Stack<Integer> stack, int num){
+        if(stack.isEmpty()){
+            stack.push(num);
         }
-        return result;
+        else{
+            if(stack.peek()>num){
+                int temp=stack.pop();
+                insert(stack, num);
+                stack.push(temp);
+            }else{
+                stack.push(num);
+            }
+
+        }
     }
 
 }
