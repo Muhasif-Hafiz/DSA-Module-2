@@ -14,7 +14,22 @@ public class ReverseStackGFG {
         }
     }
     static  void reverse(Stack<Integer> s) {
-     // TODO KAl karlena Please isse
+
+        if(!s.isEmpty()){
+            int num =s.pop();
+            reverse(s);
+            insertNumbers(s, num );
+
+        }
+    }
+    public static void insertNumbers(Stack<Integer> stack, int num) {
+        if (stack.isEmpty()) {
+            stack.push(num);
+        } else {
+            int temp = stack.pop();
+            insertNumbers(stack, num);
+            stack.push(temp);
+        }
     }
 
 }
